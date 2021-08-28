@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Javscript Casino</title>
+</head>
+<body>
+    <div class="game-app">
+    <div class="header">
+        <h4 class='header-h4'>Mohegan Sun</h4>
+        <h1 class='header-h1'>- Game a Craps -</h1>
+    </div>
+    <div class="info-row flex between">
+        <div class="dice-container flex evenly">
+            <div class="dice-box flex">
+                <div class="dice" data-dice-one></div>
+                <div class="dice" data-dice-two></div>
+             </div>
+        </div>
+        <div class="current-number flex center column">
+            <!-- <h3>CurrentRoll:<span class='number'></span></h3> -->
+            <h2>🔥#<span class='hot-number'></span></h2>
+
+        </div>
+        <div class="player-balance flex column evenly">
+            <h5>Playername:hot-rolla</h5>
+            <h5>Balance:<span class='balance'></span></h5>
+            <h5>Score:<span class='score'>0</span></h5>
+            <!-- <table>
+                <thead>
+                    <tr>
+                        <th style="text-decoration:underline">PlayerName</th>
+                        <th style="text-decoration:underline">Balance</th>
+                    </tr>
+                </thead>
+                <div class="tbody">
+                    <tr>
+                        <td class="playername">PlayerName</td>
+                        <td>$<span class="balance"></span></td>
+                    </tr>
+                </div>
+            </table> -->
+        </div>
+    </div>
+    <div class="game-container">
+        <div class="caption-card flex center">
+            <h2 class="h2-caption"></h2>
+        </div>
+        <div class="roll-tab flex evenly">Roll</div>
+     <div class="craps-table flex evenly column">
+         <div class="table-card flex absolute">
+             <div class="side side-one">
+                 <div class="game-row flex center">
+                     <h4 class='board-tile' data-tile data-4>4</h4>
+                     <h4 class='board-tile' data-tile data-5>5</h4>
+                     <h4 class='board-tile' data-tile data-6>6</h4>
+                     <h4 class='board-tile' data-tile data-8>8</h4>
+                     <h4 class='board-tile' data-tile data-9>9</h4>
+                 </div>
+                 <div class="field-row">
+                    <div class="field flex evenly">
+                        <h4 class='field-bonus field-val'>2</h4>
+                        <p class='field-val'>3</p>
+                        <p class='field-val'>4</p>
+                        <p class='field-val'>9</p>
+                        <p class='field-val'>10</p>
+                        <p class='field-val'>11</p>
+                        <h4 class='field-bonus field-val'>12</h4>
+                    </div>
+                 </div>
+             </div>
+             <div class="middle"></div>
+             <div class="side side-two">
+                <div class="game-row flex center">
+                    <h4 class='board-tile'>4</h4>
+                    <h4 class='board-tile'>5</h4>
+                    <h4 class='board-tile'>6</h4>
+                    <h4 class='board-tile'>8</h4>
+                    <h4 class='board-tile'>9</h4>
+                </div>
+                <div class="field-row">
+                    <div class="field flex evenly">
+                        <h4 class='field-bonus field-val'>2</h4>
+                        <p class='field-val'>3</p>
+                        <p class='field-val'>4</p>
+                        <p class='field-val'>9</p>
+                        <p class='field-val'>10</p>
+                        <p class='field-val'>11</p>
+                        <h4 class='field-bonus field-val'>12</h4>
+                    </div>
+                </div>
+             </div>
+          </div>
+          <div class="init-table-area"></div>
+
+     </div>
+
+
+
+     <div class="player-panel-row">
+         <div class="buy-in-modal flex center column">
+             <h1 class='buyin-h1'>$$$ Buy In!</h1>
+             <div class="flex mt-5">
+             <label for="total">Total:</label>
+             <input class='total-input' name="total" type="text" placeholder="Pick your buy-in">
+             <button class="buy-in-btn">Buy Chips</button>
+             </div>
+         </div>
+
+         <div class="chip-menu text-center">
+             <h5 class='my-5'>Select Chips:$ <span class='chips-select-total'></span></h5>
+             <div class="flex evenly">
+                <div class="chip chip-5 flex center" data-chip="5"><h4 style="pointer-events:none">$5</h4></div>
+                <div class="chip chip-10 flex center" data-chip="10"><h4 style="pointer-events:none">$10</h4></div>
+                <div class="chip chip-25 flex center" data-chip="25"><h4 style="pointer-events:none">$25</h4></div>
+                <div class="chip chip-50 flex center" data-chip="50"><h4 style="pointer-events:none">$50</h4></div>
+                <div class="chip chip-100 flex center" data-chip="100"><h4 style="pointer-events:none">$100</h1></div>
+             </div>
+         </div>
+
+         <div class="player-chip-container">
+             <h4 class='text-center black'>Money on the table:<span class='money-on-table'></span></h4>
+             <!-- <radio-card>
+                 <h4 class='black'>Select Your Entry Bet</h4>
+                 <div class="entry-form">
+                     <label for="5">$5</label><input type="radio" id="5" value="5" name="entry-bet">
+                     <label for="10">$10</label><input type="radio" id="10" value="10" name="entry-bet">
+                     <label for="25">$25</label><input type="radio" id="25" value="25" name="entry-bet">
+                     <label for="50">$50</label><input type="radio" id="50" value="50" name="entry-bet">
+                     <label for="100">$100</label><input type="radio" id="100" value="100" name="entry-bet">
+                     <button class="table-bet-btn">Bet</button>
+                 </div>
+             </radio-card> -->
+             <div class="flex evenly player-chip-menu">
+                 <div class="chip-5-column flex center"></div>
+                 <div class="chip-10-column flex center"></div>
+                 <div class="chip-25-column flex center"></div>
+                 <div class="chip-50-column flex center"></div>
+                 <div class="chip-100-column flex center"></div>
+             </div>
+         </div>
+     </div>
+    </div>
+
+    <!-- <div class="footer flex center">
+        <p>Footer&copy;</p>
+    </div> -->
+
+    </div>
+
+    <div class="flex center loader-parent">
+        <div class="eclipse"></div>
+            <div class="loader">
+                <h3>Loading...</h3>
+            </div>
+     </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

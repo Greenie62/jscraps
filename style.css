@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Klee+One&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+
+
+body{
+    font-family:Klee One;
+    background:rgb(73, 68, 68);
+    color:white;
+}
+
+.header{
+    position:relative;
+    height:10vh;
+}
+
+.mt-5{
+    margin-top:15px;
+}
+
+.my-5{
+    margin:10px 0px;
+}
+
+.text-center{
+    text-align:center;
+}
+
+.header-h4{
+    position:absolute;
+    left:15%;
+    top:10%;
+}
+
+.header-h1{
+    position:absolute;
+    left:25%;
+    top:35%;
+}
+
+.info-row{
+    height:10vh;
+    width:100%;
+    border:1px solid black;
+}
+
+
+.dice-container{
+    width:50%;
+    border:1px solid black;
+    height:100%;
+}
+
+.dice{
+    border-radius:5%;
+    height:50px;
+    width:50px;
+    border:1px solid black;
+    margin:0px 10px;
+    background:black;
+
+   
+}
+
+.grid-cols-2{
+    display:grid;
+    grid-template-columns:repeat(2,1fr)
+}
+
+.dot{
+    height:10px;
+    width:10px;
+    background:black;
+    background:white;
+    border-radius:50%;
+}
+
+.dot-div{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.game-container{
+    height:75vh;
+    /* border:1px solid red; */
+    position:relative;
+    width:100%;
+}
+
+.caption-card{
+    width:60%;
+    height:20%;
+    margin-left:10px;
+    /* border:1px solid white; */
+}
+
+
+.flex{
+    display:flex;
+}
+
+.evenly{
+    align-items:center;
+    justify-content: space-evenly;
+}
+
+.w-100{
+    width:100%;
+}
+
+.between{
+    justify-content:space-between;
+}
+
+.column{
+    flex-direction:column;
+}
+
+.between{
+    justify-content: space-between;
+}
+
+.center{
+    align-items:center;
+    justify-content: center;
+}
+
+.roll-tab{
+    width:30%;
+    height:50px;
+    background:green;
+    border:2px solid black;
+    box-shadow:1px 2px 8px black;
+    position:relative;
+    left:70%;
+    top:5%;
+    border-top-left-radius:100px;
+    border-bottom-left-radius:100px;
+    cursor:pointer;
+    transition:1s ease;
+    position:absolute;
+    
+}
+
+.roll-tab:hover{
+    transform:scale(1.05)
+}
+
+.pull{
+    animation:pull 1s forwards;
+}
+
+
+.absolute{
+    position:absolute;
+}
+
+@keyframes pull{
+    50%{transform:translateX(30px)}
+    100%{transform:translateX(0px)}
+}
+
+
+
+.loader-parent{
+    display:none;
+    position:relative;
+    top:250px;
+}
+
+
+.loader{
+    position:absolute;
+    height:100px;
+    width:100px;
+    border-radius:50%;
+    background:black;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.eclipse{
+    position:absolute;
+    height:150px;
+    width:150px;
+    border-radius:50%;
+    background:gray;
+    animation:loading 1s forwards infinite;
+    
+}
+
+
+.craps-table{
+    width:95%;
+    height:250px;
+    border-radius:35%;
+    border:2px solid white;
+    left:2%;
+    top:25%;
+    position:absolute;
+    background:rgb(19, 182, 19);
+    padding:1em;
+}
+
+.table-card{
+    width:85%;
+    height:75%;
+    border:1px solid black;
+}
+
+.middle{
+    width:10%;
+}
+
+.side{
+    width:45%;
+    height:100%;
+    border:1px solid black;
+}
+
+.game-row{
+    width:100%;
+    height:50%;
+}
+
+.field-row{
+    width:90%;
+    height:30%;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    border:1px solid black;
+    padding:.5em;
+    margin:0 auto;
+}
+
+.board-tile{
+    flex:1;
+    border:1px solid black;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.field-bonus{
+    border-radius:50%;
+    background:red;
+    color:white;
+}
+
+.field-val{
+    margin:0px 2px;
+}
+
+
+.player-panel-row{
+    height:30%;
+    width:100%;
+    border:1px solid black;
+    position:absolute;
+    top:80%;
+    background:rgb(196, 180, 180);
+    text-shadow:1px 1px 5px black;
+}
+
+@keyframes loading{
+    0%{height:100px;width:100px}
+    100%{height:150px;width:150px;opacity:.5}
+}
+
+
+.total-input{
+    width:125px;
+    padding:.25em;
+    outline:none;
+    border-radius:100px;
+    margin:0px 15px;
+}
+
+
+
+
+.chip-menu{
+    /* display:flex;
+    align-items:center;
+    justify-content: space-evenly; */
+    text-align:center;
+    display:none;
+    text-shadow:2px 1px 2px black;
+}
+
+.chip{
+    height:55px;;
+    width:55px;
+    border-radius:50%;
+    background:red;
+}
+
+
+.shrink{
+    transform:scale(.4)
+}
+
+
+.chip-5{
+    border:2px solid black;
+}
+
+.chip-10{
+    background:green;
+    border:2px solid red;
+}
+
+.chip-25{
+    background:white;
+    color:black;
+    border:3px solid green;
+}
+
+.chip-50{
+    background:blue;
+    border:3px solid black;
+}
+
+.chip-100{
+    background:violet;
+    border:3px solid white;
+}
+
+
+.player-chip-container{
+    display:none;
+    position:absolute;
+    top:0;
+    width:100%;
+    height:50%;
+    /* background:orange; */
+
+}
+
+.player-chip-menu{
+    height:100%;
+    width:100%;
+    /* background:red; */
+}
+
+.black{
+    color:black;
+}
+
